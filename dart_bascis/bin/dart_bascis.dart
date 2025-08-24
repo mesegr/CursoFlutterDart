@@ -7,8 +7,23 @@ import 'package:dart_bascis/dart_bascis.dart' as dart_bascis;
 
 void main(List<String> arguments) {
 
-  var chocolate = IceCream();
+  // ejemplo de utilizar clases desde otra
 
+  var chocolate = IceCream(); // creas un objeto del tipo clase Icecream
+  chocolate.flavor = 'chocolate';
+  chocolate.price = 6;
+  chocolate.charge();
+
+  var vainilla = IceCream();
+  vainilla.flavor = 'vainilla';
+  vainilla.price = 5;
+  vainilla.charge();
+ 
+  // son objetos diferentes por lo que uno no afecta al otro
+
+
+  // varibales
+  
   var name = 'pepe';//string
   var appellido = 'fernandez';
   var age = 31;//int
