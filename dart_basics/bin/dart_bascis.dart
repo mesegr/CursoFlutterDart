@@ -9,12 +9,12 @@ void main(List<String> arguments) {
 
   // ejemplo de utilizar clases desde otra
 
-  var chocolate = IceCream(); // creas un objeto del tipo clase Icecream
+  IceCream chocolate = IceCream(); // creas un objeto del tipo clase Icecream
   chocolate.flavor = 'chocolate';
   chocolate.price = 6;
   chocolate.charge();
 
-  var vainilla = IceCream();
+  IceCream vainilla = IceCream();
   vainilla.flavor = 'vainilla';
   vainilla.price = 5;
   vainilla.charge();
@@ -554,10 +554,24 @@ void ejercicioExtra1() {
 
 
 
+//nulabilidad
 
+String? nameNull = 'pepe'; // la interrogacion indica que puede ser nula, sino en caso de serlo daria error porque no podria ser nunca nulo
 
+// El signo de exclamación (!) fuerza a Dart a tratar la variable como NO nula.
+// Si nameNull fuera null aquí, lanzaría un error en tiempo de ejecución.
+String ejemploNull = nameNull!;
 
+// El operador ?? es el "operador de fusión nula".
+// Si nameNull es null, se usa el valor a la derecha ('pepito') como valor por defecto.
+// Si nameNull NO es null, se usa su valor.
+ejemploNull = nameNull ?? 'pepito';
 
+// Si ejemploNull es null, se le asigna el valor 'jose'. 
+// Si ya tiene un valor distinto de null, no cambia.
+// Es una forma corta de escribir: 
+// if (ejemploNull == null) { ejemploNull = 'jose'; }
+ejemploNull ??= 'jose';
 
 
 
